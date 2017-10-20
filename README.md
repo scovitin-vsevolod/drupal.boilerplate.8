@@ -1,11 +1,18 @@
-# CHM Bioland project
-[![Build Status](https://travis-ci.org/cristiroma/bioland.svg?branch=develop)](https://travis-ci.org/cristiroma/bioland)
+# Bootstrap project
+[![Build Status](https://travis-ci.org/cristiroma/drupal.boilerplate.8.svg?branch=blt)](https://travis-ci.org/cristiroma/drupal.boilerplate.8)
 
 This project uses BLT Aquia boilerplate http://blt.readthedocs.io/en/8.x/
 For local development it uses drupalVM http://docs.drupalvm.com/en/latest/
 
+This project is meant to be a quick startup for a new Drupal 8 project with some common configurations and modules.
+
+## First time setup
+Download this repo and git init the folder. (optionally you can add this repo as a secondary origin)
+
+
+
 ## Pre-requisites for local development
-* have your ssh key authorized on www.cbd-chm.net server
+* have your ssh key authorized on your project server in order to make db sync
 * install git
 * install composer
 * install virtual box and vagrant (optional ansible) (as described in drupalVM http://docs.drupalvm.com/en/latest/)
@@ -62,3 +69,9 @@ git pull
 * GitLab Artifact - 
 * GitHub - 
 * TravisCI - 
+
+
+## Extras
+### VM
+If you have conflicts on vagrant IP on local development or wish to make extra configuration or overwrite only on your local VM, you can create a ```/box/local.config.yml``` file.
+

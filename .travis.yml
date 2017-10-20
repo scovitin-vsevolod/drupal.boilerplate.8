@@ -25,11 +25,13 @@ addons:
 notifications:
   slack:
     rooms:
-      secure: HmW+cXj8SKKiSq7B/bR0LgmF3ne7Ur2len2vb+A4w4cA03gueP4cjKFZR1jBf9shUnMsnGO2Sdpq9s6KQHrtTuuo4wKq4P8XKp5FHFz9YqIDDlQl9XQxs1BhjD3VOlar/Zzv30ZXm3Y8gd6Fbqt0/b3DPmMfv5SGVxLWUqKhQD0BOuCNhfylToAU8iBQ8mW77PQRQjnGk8SzcObheREU3aqHVK9M7+eFm9m4ucsTLiXURCdwgDASraQyBMawLeWyw1Lk+YJMSQ3wg7cU4Q9SgwBtyaXJCNte/+h4rhFk33+N3653Hwee20CSxj+9bogpEMhMsi9O/O30L858N38Sat3bLZBxqDI7EACU3lj1feqya7KjkyFAZEI/yIObnIshFqj+Q6sIYoaJgDmYk+9gCcBlRT3lW7f30OKSLXtDbUNKmEDtMRNTsuSr8OSGDk4iny56XY6Ij2i9ZO29i9Hdp92qZZCjfrqg6FRoTEmgR1hMcCHRbfqiIVqAm+TShlq0qERo1o9BdROVWTZeZ3nHGz4WS5A5iba1LFanG0shvUebsepXnlIYxK0EXzbNqes+ZqI6lL/j1MF8gzBOhQtsLlRuX5FxtO1tqZysJXjyh89HAZ6ookLv5c1BvHLfkjmldoagvNOpv+pdlIp/3xILRlUf6NGnE0jaX4IwUEs16pY=
+# TODO Use a secure key for slack generated with travis client
+#      secure: verylonghasedstring
 before_install:
 - ssh-keyscan -p 2974 -t rsa,dsa,ecdsa,ED25519 -H www.chm-cbd.net 2>&1 | tee -a $HOME/.ssh/known_hosts
 - ssh-keyscan -t rsa,dsa,ecdsa,ED25519 -H gitlab.com 2>&1 | tee -a $HOME/.ssh/known_hosts
-- openssl aes-256-cbc -K $encrypted_e95f2b9cea18_key -iv $encrypted_e95f2b9cea18_iv
+# TODO Encrypt file with travis client ie: travis encrypt-file travis_deploy_rsa --org --add
+- openssl aes-256-cbc -K $encrypted_<...>_key -iv $encrypted_<...>_iv
   -in travis_deploy_rsa.enc -out ~/.ssh/id_rsa -d
 - chmod 400 ~/.ssh/id_rsa
 - phpenv config-rm xdebug.ini
