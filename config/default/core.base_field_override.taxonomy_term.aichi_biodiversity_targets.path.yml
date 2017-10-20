@@ -1,0 +1,20 @@
+uuid: 4a0002b2-51f5-4685-83f7-e43288bd9f8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.aichi_biodiversity_targets
+  module:
+    - path
+id: taxonomy_term.aichi_biodiversity_targets.path
+field_name: path
+entity_type: taxonomy_term
+bundle: aichi_biodiversity_targets
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

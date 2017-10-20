@@ -1,0 +1,23 @@
+uuid: 0fc9bc03-b514-4eae-b353-b18820fe978a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_url
+    - taxonomy.vocabulary.planning_item_type
+  module:
+    - link
+id: taxonomy_term.planning_item_type.field_url
+field_name: field_url
+entity_type: taxonomy_term
+bundle: planning_item_type
+label: 'Leo URL'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

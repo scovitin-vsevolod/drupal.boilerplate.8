@@ -1,0 +1,9 @@
+uuid: 46b87498-b1d1-4395-a19d-616686014595
+langcode: en
+status: true
+dependencies: {  }
+name: 'Planning item type'
+vid: planning_item_type
+description: 'Type of planning item (i.e. goal, objective, action, indicator)'
+hierarchy: 0
+weight: 0

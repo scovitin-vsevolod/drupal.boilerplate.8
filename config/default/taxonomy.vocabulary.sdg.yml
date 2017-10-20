@@ -1,0 +1,9 @@
+uuid: bb9d8a43-39c5-4758-985b-26e1ff53e3c0
+langcode: en
+status: true
+dependencies: {  }
+name: 'Sustainable Development Goals'
+vid: sdg
+description: 'The list of 17 sustainable development goals'
+hierarchy: 0
+weight: 0

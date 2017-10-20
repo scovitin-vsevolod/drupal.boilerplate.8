@@ -1,0 +1,22 @@
+uuid: ca2ae50d-c8e9-4d56-850c-70bf87b90851
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.chm_site
+id: node.chm_site.promote
+field_name: promote
+entity_type: node
+bundle: chm_site
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

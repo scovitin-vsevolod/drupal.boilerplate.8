@@ -1,0 +1,45 @@
+uuid: acecf6e6-72c9-4936-a520-15d0385ccf12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.planning_item_type.field_machine_name
+    - field.field.taxonomy_term.planning_item_type.field_url
+    - taxonomy.vocabulary.planning_item_type
+  module:
+    - link
+    - text
+id: taxonomy_term.planning_item_type.default
+targetEntityType: taxonomy_term
+bundle: planning_item_type
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_machine_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_url:
+    weight: 2
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - entityqueue.entity_queue.latest_updates
+id: entity_subqueue.latest_updates
+target_entity_type_id: entity_subqueue
+target_bundle: latest_updates
+default_langcode: site_default
+language_alterable: false

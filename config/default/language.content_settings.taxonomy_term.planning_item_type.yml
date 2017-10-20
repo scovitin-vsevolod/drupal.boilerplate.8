@@ -1,0 +1,16 @@
+uuid: 4b5c1fb7-6292-44df-a0f2-d29c1ca4d71c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.planning_item_type
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.planning_item_type
+target_entity_type_id: taxonomy_term
+target_bundle: planning_item_type
+default_langcode: site_default
+language_alterable: false

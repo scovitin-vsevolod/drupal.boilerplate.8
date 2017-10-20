@@ -1,0 +1,18 @@
+uuid: 7e8b47f2-8a1d-4a2d-bc23-0657f9072b07
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.aichi_biodiversity_targets
+id: taxonomy_term.aichi_biodiversity_targets.name
+field_name: name
+entity_type: taxonomy_term
+bundle: aichi_biodiversity_targets
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

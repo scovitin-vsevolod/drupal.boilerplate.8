@@ -1,0 +1,29 @@
+uuid: 167ac0a8-bf60-4cb5-9434-e740a2267b60
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.chm_site.body
+    - node.type.chm_site
+  module:
+    - text
+    - user
+id: node.chm_site.teaser
+targetEntityType: node
+bundle: chm_site
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

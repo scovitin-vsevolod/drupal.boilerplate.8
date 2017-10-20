@@ -1,8 +1,64 @@
-# drupal.boilerplate.8
-Inspired by drupal-composer/drupal-project, tailored to my needs
+# CHM Bioland project
+[![Build Status](https://travis-ci.org/cristiroma/bioland.svg?branch=develop)](https://travis-ci.org/cristiroma/bioland)
 
-# Starting a new project
+This project uses BLT Aquia boilerplate http://blt.readthedocs.io/en/8.x/
+For local development it uses drupalVM http://docs.drupalvm.com/en/latest/
 
+## Pre-requisites for local development
+* have your ssh key authorized on www.cbd-chm.net server
+* install git
+* install composer
+* install virtual box and vagrant (optional ansible) (as described in drupalVM http://docs.drupalvm.com/en/latest/)
+
+## Getting Started
+
+```bash
+git clone git@gitlab.com:bioland/website.git
+git checkout develop
+composer self-update
+composer install
+composer run-script blt-alias
+source ~/.bash_profile
+blt vm
+blt setup
 ```
-composer -vv create-project cristiroma/drupal-boilerplate-8 <project-name> --stability dev --no-interaction
+Now you should be able to see the website at http://bioland.local
+
+## Ongoing development
+* Primary development branch: develop
+* Local drush alias: @bioland.local
+* Local site URL: http://bioland.local
+
+### Common commands
+* Run ```blt setup:refresh``` to build your local environment **without database and public files**
+* Run ```blt setup:refresh-db``` to build your local environment **including database and public files**
+
+### Configuration management
+This project uses config_split for managing configurations. There are 2 splits: prod and dev which are activated automatically by  
+In order to preserve the config split integrity while working in a team, the following workflow should be applied 
+
+1. drush csex -y
+2. git commit
+3. git pull (merge and solve potential conflicts)
+4. blt setup:refresh (if config import fails, fix the issues and commit)
+5. git push
+
+### Merging config management with production
+[To be discussed]
+
+### Updating production
+The repo for artifacts is https://gitlab.com/bioland/website-artifacts
+From prod project root
+```bash 
+git pull
+./update.sh
 ```
+
+
+## Resources
+
+* Redmine - https://support.chm-cbd.net
+* GitLab - https://gitlab.com/bioland/website
+* GitLab Artifact - https://gitlab.com/bioland/website-artifacts
+* GitHub - https://github.com/cristiroma/bioland
+* TravisCI - https://travis-ci.org/cristiroma/bioland

@@ -1,0 +1,9 @@
+uuid: 072f0758-7d4c-4d22-934e-89f46427fe55
+langcode: en
+status: true
+dependencies: {  }
+name: Treaties
+vid: treaties
+description: ''
+hierarchy: 0
+weight: 0

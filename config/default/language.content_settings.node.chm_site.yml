@@ -1,0 +1,16 @@
+uuid: 82dc3fe9-8ec4-4467-b759-5aed60dd3ea6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.chm_site
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.chm_site
+target_entity_type_id: node
+target_bundle: chm_site
+default_langcode: site_default
+language_alterable: false

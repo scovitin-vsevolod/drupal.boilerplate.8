@@ -1,0 +1,47 @@
+name: 'Base site'
+type: module
+core: 8.x
+dependencies:
+  - address
+  - blazy
+  - block_content
+  - ckeditor
+  - colorbox
+  - config_split
+  - content_translation
+  - crop
+  - datetime_range
+  - ds
+  - editor
+  - editor_file
+  - entity_reference_revisions
+  - entityqueue
+  - field
+  - file
+  - filter
+  - geolocation
+  - image
+  - image_widget_crop
+  - inline_responsive_images
+  - language
+  - link
+  - linkit
+  - menu_ui
+  - node
+  - options
+  - panelizer
+  - paragraphs
+  - path
+  - pathauto
+  - rdf
+  - responsive_image
+  - slick
+  - slick_views
+  - smart_trim
+  - spamspan
+  - string_field_formatter
+  - taxonomy
+  - text
+  - user
+  - views
+  - webform

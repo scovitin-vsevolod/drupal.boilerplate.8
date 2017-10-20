@@ -1,0 +1,20 @@
+uuid: 4c2a2771-f1a3-4fc8-898f-791f9e3dd25f
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.treaties
+  module:
+    - text
+id: taxonomy_term.treaties.description
+field_name: description
+entity_type: taxonomy_term
+bundle: treaties
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

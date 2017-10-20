@@ -1,0 +1,20 @@
+uuid: 194a0286-c1fe-4fbd-829c-dca6ae79149d
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.sdg
+  module:
+    - text
+id: taxonomy_term.sdg.description
+field_name: description
+entity_type: taxonomy_term
+bundle: sdg
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

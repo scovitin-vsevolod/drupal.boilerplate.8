@@ -1,0 +1,16 @@
+uuid: bb29899b-0a1b-47b8-9c25-98b31e181185
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.treaties
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.treaties
+target_entity_type_id: taxonomy_term
+target_bundle: treaties
+default_langcode: site_default
+language_alterable: false

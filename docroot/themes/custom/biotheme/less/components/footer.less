@@ -1,0 +1,41 @@
+.footer__top,
+.footer__bottom {
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.footer__top {
+  background-color: @footer-bg;
+  color: #fff;
+
+  nav h2 {
+    margin-top: 0;
+  }
+
+  .nav > li > a {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .nav > li > a:hover,
+  .nav > li > a:focus {
+    background-color: transparent;
+    color: #cdcdcd;
+  }
+
+}
+
+.footer__bottom {
+  .row {
+    display: flex;
+    align-items: center;
+    // breakpoint of columns
+    @media (max-width: @screen-xs-max) {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  .col-sm-3 + .col-sm-3 {
+    margin-top: 1em;
+  }
+}

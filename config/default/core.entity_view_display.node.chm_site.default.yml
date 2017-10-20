@@ -1,0 +1,61 @@
+uuid: 1722c8b5-ad5b-4daa-a79a-2409037c2fb7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.chm_site.body
+    - field.field.node.chm_site.field_country
+    - field.field.node.chm_site.field_image
+    - field.field.node.chm_site.field_url
+    - node.type.chm_site
+  module:
+    - image
+    - link
+    - text
+    - user
+id: node.chm_site.default
+targetEntityType: node
+bundle: chm_site
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_country:
+    weight: 104
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_image:
+    weight: 103
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_url:
+    weight: 102
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  langcode: true

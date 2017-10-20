@@ -1,0 +1,18 @@
+uuid: fa043359-a9de-4453-a1ee-659faed30291
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.planning_item_type
+id: taxonomy_term.planning_item_type.name
+field_name: name
+entity_type: taxonomy_term
+bundle: planning_item_type
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

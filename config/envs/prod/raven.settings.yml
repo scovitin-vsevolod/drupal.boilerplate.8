@@ -1,0 +1,19 @@
+client_key: 'https://9e90501c4a034afab821a7cff3d9115f:0a8fe789f88147d3bf09d47b6f73bac1@sentry.io/229832'
+fatal_error_handler: true
+fatal_error_handler_memory: 2560
+log_levels:
+  1: 1
+  2: 2
+  3: 3
+  4: 4
+  5: 0
+  6: 0
+  7: 0
+  8: 0
+stack: true
+timeout: !!float 2
+trace: false
+javascript_error_handler: false
+public_dsn: 'https://9e90501c4a034afab821a7cff3d9115f@sentry.io/229832'
+_core:
+  default_config_hash: EJsMMn516WDvtSeOL9Dx7ulP0PnE5dNVCv6AcXolnKg

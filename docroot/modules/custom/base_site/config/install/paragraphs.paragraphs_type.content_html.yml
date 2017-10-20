@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+id: content_html
+label: 'Content HTML'
+icon_uuid: null
+description: 'Paragraph with 1 or multiple instances of HTML editor'
+behavior_plugins: {  }

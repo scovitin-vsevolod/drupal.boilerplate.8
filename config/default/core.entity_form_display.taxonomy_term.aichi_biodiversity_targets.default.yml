@@ -1,0 +1,93 @@
+uuid: e7251dc1-b3bc-47ce-906c-2fec5e3a6f82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.aichi_biodiversity_targets.field_date
+    - field.field.taxonomy_term.aichi_biodiversity_targets.field_image
+    - field.field.taxonomy_term.aichi_biodiversity_targets.field_index
+    - field.field.taxonomy_term.aichi_biodiversity_targets.field_official_name
+    - field.field.taxonomy_term.aichi_biodiversity_targets.field_planning_item_type
+    - image.style.thumbnail
+    - taxonomy.vocabulary.aichi_biodiversity_targets
+  module:
+    - datetime
+    - image
+    - path
+    - text
+id: taxonomy_term.aichi_biodiversity_targets.default
+targetEntityType: taxonomy_term
+bundle: aichi_biodiversity_targets
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_date:
+    weight: 34
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_image:
+    weight: 35
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_index:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_official_name:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_planning_item_type:
+    weight: 33
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

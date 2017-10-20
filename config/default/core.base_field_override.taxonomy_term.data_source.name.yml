@@ -1,0 +1,18 @@
+uuid: a8e63839-119e-428a-8dd5-bce573c020ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.data_source
+id: taxonomy_term.data_source.name
+field_name: name
+entity_type: taxonomy_term
+bundle: data_source
+label: Name
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

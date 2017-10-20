@@ -1,0 +1,7 @@
+langcode: en
+status: true
+dependencies: {  }
+id: d_m_y_h_m
+label: 'd M Y H:m'
+locked: false
+pattern: 'd M Y H:m'

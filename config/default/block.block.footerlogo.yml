@@ -1,0 +1,25 @@
+uuid: 3dfab32b-0407-483e-a4c4-6c9259f5da63
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:2eab835e-6421-4251-bf8b-ba4b6d560cf8'
+  module:
+    - block_content
+  theme:
+    - biotheme
+id: footerlogo
+theme: biotheme
+region: footer2_col_1
+weight: 0
+provider: null
+plugin: 'block_content:2eab835e-6421-4251-bf8b-ba4b6d560cf8'
+settings:
+  id: 'block_content:2eab835e-6421-4251-bf8b-ba4b6d560cf8'
+  label: 'Footer logo'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

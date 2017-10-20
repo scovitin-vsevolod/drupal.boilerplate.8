@@ -1,0 +1,25 @@
+uuid: 2c274f69-6620-4ef9-90ad-77fd0338ba3f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:d8ae12ed-0418-4597-ae94-d5d65d29c835'
+  module:
+    - block_content
+  theme:
+    - biotheme
+id: footerlogojbf
+theme: biotheme
+region: footer2_col_4
+weight: 0
+provider: null
+plugin: 'block_content:d8ae12ed-0418-4597-ae94-d5d65d29c835'
+settings:
+  id: 'block_content:d8ae12ed-0418-4597-ae94-d5d65d29c835'
+  label: 'Footer logo JBF'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

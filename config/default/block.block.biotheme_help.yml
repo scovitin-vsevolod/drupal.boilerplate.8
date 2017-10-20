@@ -1,0 +1,22 @@
+uuid: b4e58aa7-d518-4cb0-ae60-dad17e79c338
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - biotheme
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: biotheme_help
+theme: biotheme
+region: content
+weight: -2
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

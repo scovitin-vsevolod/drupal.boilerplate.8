@@ -1,0 +1,18 @@
+uuid: e1465ef9-6c19-4235-92f0-efe138270d46
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.aichi_biodiversity_targets
+id: taxonomy_term.aichi_biodiversity_targets.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: aichi_biodiversity_targets
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

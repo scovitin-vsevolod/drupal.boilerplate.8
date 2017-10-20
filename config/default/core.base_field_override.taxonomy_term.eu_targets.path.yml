@@ -1,0 +1,20 @@
+uuid: db6a42ce-2887-4b0a-abb4-ac9b3a538068
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.eu_targets
+  module:
+    - path
+id: taxonomy_term.eu_targets.path
+field_name: path
+entity_type: taxonomy_term
+bundle: eu_targets
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

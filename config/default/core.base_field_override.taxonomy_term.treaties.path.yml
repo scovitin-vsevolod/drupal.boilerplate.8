@@ -1,0 +1,20 @@
+uuid: 96def9e4-915e-42e0-9816-a3620418440b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.treaties
+  module:
+    - path
+id: taxonomy_term.treaties.path
+field_name: path
+entity_type: taxonomy_term
+bundle: treaties
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

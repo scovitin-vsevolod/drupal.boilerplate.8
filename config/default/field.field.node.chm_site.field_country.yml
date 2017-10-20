@@ -1,0 +1,29 @@
+uuid: 87708f74-61d2-4772-b326-a5099f8cf774
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_country
+    - node.type.chm_site
+    - taxonomy.vocabulary.country
+id: node.chm_site.field_country
+field_name: field_country
+entity_type: node
+bundle: chm_site
+label: Country
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      country: country
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

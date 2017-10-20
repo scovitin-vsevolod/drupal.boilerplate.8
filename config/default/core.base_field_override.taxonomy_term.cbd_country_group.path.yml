@@ -1,0 +1,20 @@
+uuid: c022cd13-3c1a-4e2f-87f1-03aeb5ed4d43
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.cbd_country_group
+  module:
+    - path
+id: taxonomy_term.cbd_country_group.path
+field_name: path
+entity_type: taxonomy_term
+bundle: cbd_country_group
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

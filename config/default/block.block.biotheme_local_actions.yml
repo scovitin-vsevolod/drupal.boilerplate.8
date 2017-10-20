@@ -1,0 +1,20 @@
+uuid: 5d6ab759-88f6-4ee6-aa12-7e831be232cc
+langcode: en
+status: true
+dependencies:
+  theme:
+    - biotheme
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: biotheme_local_actions
+theme: biotheme
+region: content
+weight: -1
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,16 @@
+uuid: b0974d5a-45bd-4ba0-a6ca-dba6a36ee2e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.aichi_biodiversity_targets
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: taxonomy_term.aichi_biodiversity_targets
+target_entity_type_id: taxonomy_term
+target_bundle: aichi_biodiversity_targets
+default_langcode: site_default
+language_alterable: false

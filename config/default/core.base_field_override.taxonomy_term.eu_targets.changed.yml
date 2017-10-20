@@ -1,0 +1,18 @@
+uuid: fa418778-b251-499b-be84-55e220aa6980
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.eu_targets
+id: taxonomy_term.eu_targets.changed
+field_name: changed
+entity_type: taxonomy_term
+bundle: eu_targets
+label: Changed
+description: 'The time that the term was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

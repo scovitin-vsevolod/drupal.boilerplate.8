@@ -1,0 +1,8 @@
+langcode: en
+status: true
+dependencies: {  }
+name: 'CBD country group'
+vid: cbd_country_group
+description: ''
+hierarchy: 0
+weight: 0
