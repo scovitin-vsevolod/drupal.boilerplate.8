@@ -1,7 +1,7 @@
 project:
   machine_name: boilerplate
   prefix: boilerplate
-  human_name: Boilerplate 8
+  human_name: 'Boilerplate 8'
   profile:
     name: standard
   local:
@@ -14,8 +14,6 @@ git:
   user:
     name: cristiroma
     email: ci@no-reply.org
-setup:
-  strategy: sync
 drush:
   aliases:
     remote: '${project.machine_name}.prod'
@@ -24,30 +22,26 @@ drush:
   default_alias: '${drush.aliases.local}'
 modules:
   local:
-    # Extra stuff from development split.
-    enable: []
-    uninstall: []
+    enable: {  }
+    uninstall: {  }
   ci:
-    # Extra stuff from development split.
     enable: {  }
     uninstall: [shield, seckit]
   dev:
-    # Extra stuff from development split.
-    enable: [shield]
-    uninstall: { }
+    enable: [shield, shield]
+    uninstall: {  }
   test:
-    # Extra stuff from development split.
-    enable: [shield]
-    uninstall: { }
+    enable: [shield, shield]
+    uninstall: {  }
   prod:
-    # Extra stuff from prod split.
-    enable: { }
-    uninstall: { }
-
+    enable: {  }
+    uninstall: {  }
+setup:
+  strategy: sync
 target-hooks:
   frontend-setup:
-   dir: ${docroot}/themes/custom/boilerplate
-   command: 'npm install'
+    dir: '${docroot}/themes/custom/boilerplate'
+    command: 'npm install'
   frontend-build:
-   dir: ${docroot}/themes/custom/boilerplate
-   command: 'npm run build'
+    dir: '${docroot}/themes/custom/boilerplate'
+    command: 'npm run build'

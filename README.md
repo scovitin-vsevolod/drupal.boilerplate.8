@@ -26,8 +26,8 @@ Now you should be able to see the website at http://bioland.local
 
 ## Ongoing development
 * Primary development branch: develop
-* Local drush alias: @bioland.local
-* Local site URL: http://bioland.local
+* Local drush alias: @boilerplate.local
+* Local site URL: http://boilerplate.local
 
 ### Common commands
 * Run ```blt setup:refresh``` to build your local environment **without database and public files**
@@ -47,7 +47,7 @@ In order to preserve the config split integrity while working in a team, the fol
 [To be discussed]
 
 ### Updating production
-The repo for artifacts is https://gitlab.com/bioland/website-artifacts
+The repo for artifacts is https://github.com/cristiroma/drupal.boilerplate.8
 From prod project root
 ```bash 
 git pull
@@ -57,8 +57,8 @@ git pull
 
 ## Resources
 
-* Redmine - https://support.chm-cbd.net
-* GitLab - https://gitlab.com/bioland/website
-* GitLab Artifact - https://gitlab.com/bioland/website-artifacts
-* GitHub - https://github.com/cristiroma/bioland
-* TravisCI - https://travis-ci.org/cristiroma/bioland
+* Redmine - 
+* GitLab - 
+* GitLab Artifact - 
+* GitHub - 
+* TravisCI - 

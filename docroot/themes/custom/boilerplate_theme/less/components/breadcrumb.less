@@ -1,0 +1,22 @@
+.breadcrumb {
+  margin-bottom: 1.4em;
+}
+
+.breadcrumb-prefix,
+.breadcrumb > li {
+  text-transform: uppercase;
+}
+
+.breadcrumb-prefix,
+.breadcrumb {
+  font-size: .8em;
+  display: inline;
+}
+
+.breadcrumb-prefix + .breadcrumb {
+  margin-left: 1em;
+}
+
+@media @grid-mobile {
+  .breadcrumb-prefix, .breadcrumb { display: none; }
+}
