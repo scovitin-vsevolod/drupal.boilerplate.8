@@ -205,6 +205,9 @@
             "npm-asset"
         ],
         "patches": {
+          "drupal/core": {
+            "prevent error on first config import": "https://www.drupal.org/files/issues/content_translation_config-2868294-2.patch"
+          },
           "drupal/inline_responsive_images": {
             "absolute url fix": "https://www.drupal.org/files/issues/inline_responsive_images-absolute-url-bug-2867014-1.patch"
           },
@@ -245,6 +248,9 @@
             ]
         },
         "merge-plugin": {
+            "include": [
+              "vendor/acquia/blt/composer.required.json"
+            ],
             "merge-extra": true,
             "merge-extra-deep": true,
             "merge-scripts": true,

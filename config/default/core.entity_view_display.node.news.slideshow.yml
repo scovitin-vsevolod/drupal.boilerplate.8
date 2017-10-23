@@ -18,7 +18,7 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: bio_slideshow_item
+      id: boilerplate_slideshow_item
       library: null
       disable_css: false
       entity_classes: all_classes

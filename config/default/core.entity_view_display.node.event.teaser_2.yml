@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.event.field_countries
     - field.field.node.event.field_dates
     - field.field.node.event.field_event_address
-    - field.field.node.event.field_event_status
     - field.field.node.event.field_geolocation
     - field.field.node.event.field_image
     - field.field.node.event.field_images
@@ -30,7 +29,7 @@ third_party_settings:
     default: default
   ds:
     layout:
-      id: bio_teaser_9_3
+      id: boilerplate_teaser_9_3
       library: null
       disable_css: false
       entity_classes: all_classes
@@ -91,7 +90,6 @@ hidden:
   field_countries: true
   field_dates: true
   field_event_address: true
-  field_event_status: true
   field_geolocation: true
   field_images: true
   field_in_slideshow: true

@@ -14,8 +14,11 @@ git:
   user:
     name: cristiroma
     email: ci@no-reply.org
+cm:
+  strategy: config-split
 setup:
-  strategy: sync
+  strategy: import
+  dump-file: ../boilerplate.sql
 drush:
   aliases:
     remote: '${project.machine_name}.prod'
@@ -46,8 +49,8 @@ modules:
 
 target-hooks:
   frontend-setup:
-   dir: ${docroot}/themes/custom/boilerplate
-   command: 'npm install'
+    dir: ${docroot}/themes/custom/boilerplate_theme
+    command: 'npm install && npm install grunt-cli'
   frontend-build:
-   dir: ${docroot}/themes/custom/boilerplate
-   command: 'npm run build'
+    dir: ${docroot}/themes/custom/boilerplate_theme
+    command: 'npm run build'

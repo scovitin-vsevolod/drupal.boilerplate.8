@@ -1,9 +1,0 @@
-uuid: be889b9f-235b-4fe6-a3a8-290e1d3a3bad
-langcode: en
-status: true
-dependencies: {  }
-name: 'Data source'
-vid: data_source
-description: ''
-hierarchy: 0
-weight: 0

@@ -3,16 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.country.field_cbd_country_group
-    - field.field.taxonomy_term.country.field_cbd_id
-    - field.field.taxonomy_term.country.field_country_cbd_guid
-    - field.field.taxonomy_term.country.field_gef_id
     - field.field.taxonomy_term.country.field_image
     - field.field.taxonomy_term.country.field_is_un_country
     - field.field.taxonomy_term.country.field_iso3l_code
     - field.field.taxonomy_term.country.field_iso_code
     - field.field.taxonomy_term.country.field_official_name
-    - field.field.taxonomy_term.country.field_protected_planet_id
     - field.field.taxonomy_term.country.field_un_number
     - field.field.taxonomy_term.country.field_un_official_short_name
     - image.style.thumbnail
@@ -34,39 +29,6 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
-  field_cbd_country_group:
-    weight: 42
-    settings:
-      match_operator: CONTAINS
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_cbd_id:
-    weight: 39
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_country_cbd_guid:
-    weight: 38
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_gef_id:
-    weight: 41
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
   field_image:
     weight: 32
     settings:
@@ -100,14 +62,6 @@ content:
     region: content
   field_official_name:
     weight: 33
-    settings:
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: string_textfield
-    region: content
-  field_protected_planet_id:
-    weight: 40
     settings:
       size: 60
       placeholder: ''

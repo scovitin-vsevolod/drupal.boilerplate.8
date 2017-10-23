@@ -18,7 +18,7 @@ dependencies:
 third_party_settings:
   ds:
     layout:
-      id: bio_news
+      id: boilerplate_item_8_4
       library: null
       disable_css: false
       entity_classes: all_classes

@@ -3,16 +3,11 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.taxonomy_term.country.field_cbd_country_group
-    - field.field.taxonomy_term.country.field_cbd_id
-    - field.field.taxonomy_term.country.field_country_cbd_guid
-    - field.field.taxonomy_term.country.field_gef_id
     - field.field.taxonomy_term.country.field_image
     - field.field.taxonomy_term.country.field_is_un_country
     - field.field.taxonomy_term.country.field_iso3l_code
     - field.field.taxonomy_term.country.field_iso_code
     - field.field.taxonomy_term.country.field_official_name
-    - field.field.taxonomy_term.country.field_protected_planet_id
     - field.field.taxonomy_term.country.field_un_number
     - field.field.taxonomy_term.country.field_un_official_short_name
     - taxonomy.vocabulary.country
@@ -38,38 +33,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_cbd_country_group:
-    weight: 12
-    label: above
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_cbd_id:
-    weight: 9
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_country_cbd_guid:
-    weight: 8
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_gef_id:
-    weight: 11
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
   field_image:
     weight: 2
     label: above
@@ -107,14 +70,6 @@ content:
     region: content
   field_official_name:
     weight: 3
-    label: above
-    settings:
-      link_to_entity: false
-    third_party_settings: {  }
-    type: string
-    region: content
-  field_protected_planet_id:
-    weight: 10
     label: above
     settings:
       link_to_entity: false

@@ -1,5 +1,5 @@
 hotlink: false
-origin: 'https://www8.chm-cbd.net'
+origin: 'http://boilerplate.local'
 origin_dir: sites/default/files
 use_imagecache_root: true
 verify: true

@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
+    - ds
     - panelizer
     - user
 third_party_settings:
@@ -16,12 +17,34 @@ third_party_settings:
     default: default
     displays:
       default:
-        blocks: {  }
+        blocks:
+          cc8b3fe4-1a4a-4487-a3b6-ad95c667f7a3:
+            id: 'views_block:slideshow-block_1'
+            label: ''
+            provider: views
+            label_display: visible
+            views_label: ''
+            items_per_page: none
+            region: slideshow
+            weight: 0
+            uuid: cc8b3fe4-1a4a-4487-a3b6-ad95c667f7a3
+            context_mapping: {  }
+          f04582d4-07ab-4839-9bf3-1c39723d523d:
+            id: 'views_block:slideshow-block_2'
+            label: ''
+            provider: views
+            label_display: visible
+            views_label: ''
+            items_per_page: none
+            region: right
+            weight: 0
+            uuid: f04582d4-07ab-4839-9bf3-1c39723d523d
+            context_mapping: {  }
         id: panels_variant
         label: Default
         uuid: 4351e4bc-a69d-47d6-b07f-f9692d047a8d
         weight: 0
-        layout: layout_onecol
+        layout: boilerplate_homepage
         layout_settings: {  }
         page_title: '[node:title]'
         storage_type: panelizer_default
@@ -29,6 +52,16 @@ third_party_settings:
         builder: ipe
         pattern: panelizer
         static_context: {  }
+  ds:
+    layout:
+      id: boilerplate_homepage
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      slideshow:
+        - links
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -36,7 +69,7 @@ mode: default
 content:
   links:
     weight: 100
-    region: content
+    region: slideshow
     settings: {  }
     third_party_settings: {  }
 hidden:

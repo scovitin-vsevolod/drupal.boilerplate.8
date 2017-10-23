@@ -1,4 +1,5 @@
 <?php
+// @codingStandardsIgnoreFile
 
 /**
  * @file
@@ -68,9 +69,6 @@ $settings['trusted_host_patterns'] = array(
 // Use development service parameters.
 $settings['container_yamls'][] = $dir . '/docroot/sites/development.services.yml';
 $settings['container_yamls'][] = $dir . '/docroot/sites/blt.development.services.yml';
-
-// Allow access to update.php.
-$settings['update_free_access'] = TRUE;
 
 /**
  * Assertions.

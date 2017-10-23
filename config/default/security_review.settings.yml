@@ -1,5 +1,6 @@
-configured: false
-untrusted_roles: {  }
+configured: true
+untrusted_roles:
+  - anonymous
 log: true
 last_run: 0
 _core:

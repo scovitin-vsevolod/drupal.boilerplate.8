@@ -1,9 +1,0 @@
-uuid: 171dc3b0-75a8-435c-9c05-ff085821fd3a
-langcode: en
-status: true
-dependencies: {  }
-name: 'EU Biodiversity Targets'
-vid: eu_targets
-description: 'European Union reference targets'
-hierarchy: 0
-weight: 0

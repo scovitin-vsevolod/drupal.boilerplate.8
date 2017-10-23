@@ -10,9 +10,46 @@ use Acquia\Blt\Robo\BltTasks;
 class SetupCustomCommand extends BltTasks {
 
   /**
+   * Install dependencies, builds docroot, installs Drupal.
+   *
+   * @see \Acquia\Blt\Robo\Commands\Setup\AllCommand::setup()
+   *
+   * @command custom:setup
+   */
+  public function setup() {
+    $this->say("Setting up local environment for site '{$this->getConfigValue('site')}' using drush alias @{$this->getConfigValue('drush.alias')}");
+
+    $commands = [
+      'setup:build',
+      'setup:hash-salt',
+    ];
+
+    switch ($this->getConfigValue('setup.strategy')) {
+      case 'install':
+        $commands[] = 'setup:drupal:install';
+        break;
+
+      case 'sync':
+        $commands[] = 'sync:db';
+        break;
+
+      case 'import':
+        $commands[] = 'custom:import';
+        $commands[] = 'setup:update';
+        break;
+    }
+
+    $commands[] = 'setup:toggle-modules';
+    $commands[] = 'install-alias';
+    $commands[] = 'setup:config-import';
+
+    $this->invokeCommands($commands);
+  }
+
+  /**
    * Refresh the project without db and files.
    *
-   * @command setup:refresh
+   * @command custom:refresh
    */
   public function customRefreshNoDb() {
     $commands = [
@@ -28,7 +65,7 @@ class SetupCustomCommand extends BltTasks {
   /**
    * Refresh the project with db and files.
    *
-   * @command setup:refresh-db
+   * @command custom:refresh-db
    */
   public function customRefreshDb() {
     $commands = [
@@ -55,6 +92,23 @@ class SetupCustomCommand extends BltTasks {
     ];
 
     $this->invokeCommands($commands);
+  }
+
+  /**
+   * Imports a .sql file into the Drupal database.
+   *
+   * @command custom:import
+   */
+  public function import() {
+    $task = $this->taskDrush()
+      ->drush('sql-drop -y')
+      ->drush('sql-cli < ' . $this->getConfigValue('setup.dump-file'));
+    $result = $task->run();
+    $exit_code = $result->getExitCode();
+
+    if ($exit_code) {
+      throw new BltException("Unable to import setup.dump-file.");
+    }
   }
 
 }

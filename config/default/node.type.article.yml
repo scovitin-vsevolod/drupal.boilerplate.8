@@ -11,9 +11,9 @@ third_party_settings:
     parent: 'main:'
 _core:
   default_config_hash: AeW1SEDgb1OTQACAWGhzvMknMYAJlcZu0jljfeU3oso
-name: 'Web page'
+name: Page
 type: article
-description: 'Use page for the static content of your national CHM website, such as the About Us page.'
+description: 'Use page for the static content of your website, such as the About Us page.'
 help: ''
 new_revision: true
 preview_mode: 1

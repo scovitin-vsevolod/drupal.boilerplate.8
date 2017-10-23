@@ -1,9 +1,0 @@
-uuid: 52fc83a1-d13b-4233-8193-7a65f1e4b65d
-langcode: en
-status: true
-dependencies: {  }
-name: 'Event status'
-vid: event_status
-description: ''
-hierarchy: 0
-weight: 0

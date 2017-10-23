@@ -9,7 +9,19 @@ This project is meant to be a quick startup for a new Drupal 8 project with some
 ## First time setup
 Download this repo and git init the folder. (optionally you can add this repo as a secondary origin)
 
+Change names in project.yml
 
+Change names in box/config.yml
+
+Change names in drush/site-aliases/aliases.drushrc.php.
+
+run scripts from Getting started
+
+Log in to drupal ```drush @[project.machine_name].local uli```
+
+Set your staging server url in /admin/config/system/stage_file_proxy
+
+When your staging server is ready and you would like to sync the db, change in project.yml setup.strategy from import to sync 
 
 ## Pre-requisites for local development
 * have your ssh key authorized on your project server in order to make db sync
@@ -27,7 +39,7 @@ composer install
 composer run-script blt-alias
 source ~/.bash_profile
 blt vm
-blt setup
+blt custom:setup
 ```
 Now you should be able to see the website at http://bioland.local
 
@@ -37,8 +49,8 @@ Now you should be able to see the website at http://bioland.local
 * Local site URL: http://boilerplate.local
 
 ### Common commands
-* Run ```blt setup:refresh``` to build your local environment **without database and public files**
-* Run ```blt setup:refresh-db``` to build your local environment **including database and public files**
+* Run ```blt custom:refresh``` to build your local environment **without database and public files**
+* Run ```blt custom:refresh-db``` to build your local environment **including database and public files**
 
 ### Configuration management
 This project uses config_split for managing configurations. There are 2 splits: prod and dev which are activated automatically by  
@@ -47,7 +59,7 @@ In order to preserve the config split integrity while working in a team, the fol
 1. drush csex -y
 2. git commit
 3. git pull (merge and solve potential conflicts)
-4. blt setup:refresh (if config import fails, fix the issues and commit)
+4. blt custom:refresh (if config import fails, fix the issues and commit)
 5. git push
 
 ### Merging config management with production

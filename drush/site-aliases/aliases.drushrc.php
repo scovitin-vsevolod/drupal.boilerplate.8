@@ -360,26 +360,17 @@
 #    'uri' => 'http://example.com',
 #    'root' => $aliases['dev']['root'],
 #  ) + $aliases['server'];
-
-// Prod environment.
-$aliases['boilerplate.prod'] = array(
-  'root' => '/var/www/html/boilerplate/prod/docroot',
-  'uri' => 'test.ro',
-  'remote-host' => 'test.ro',
-  'remote-user' => 'php',
-  'ssh-options' => '-p custom port'
-);
-
 // Local environment.
-$aliases['bilerpl.local'] = array(
-  'root' => '/var/www/bioland/docroot',
-  'uri' => 'http://bioland.local',
+
+$aliases['boilerplate.local'] = array(
+  'root' => '/var/www/boilerplate/docroot',
+  'uri' => 'http://boilerplate.local',
 );
 
 // Add remote connection options when alias is used outside VM.
 if ('vagrant' != $_SERVER['USER']) {
-  $aliases['bioland.local'] += array(
-    'remote-host' => 'bioland.local',
+  $aliases['boilerplate.local'] += array(
+    'remote-host' => 'boilerplate.local',
     'remote-user' => 'vagrant',
     'ssh-options' => '-o PasswordAuthentication=no -i ' . drush_server_home() . '/.vagrant.d/insecure_private_key'
   );

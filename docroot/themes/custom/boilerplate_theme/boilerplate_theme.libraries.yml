@@ -33,6 +33,6 @@ global-styling:
     dependencies:
       - core/jquery
       - core/underscore
-      - boilerplate/bootstrap-js
-      - boilerplate/flexibility
-      - boilerplate/fonts
+      - boilerplate_theme/bootstrap-js
+      - boilerplate_theme/flexibility
+      - boilerplate_theme/fonts

@@ -28,4 +28,4 @@ regions:
   footer: 'Footer'
 
 libraries:
-  - 'boilerplate/global-styling'
+  - 'boilerplate_theme/global-styling'

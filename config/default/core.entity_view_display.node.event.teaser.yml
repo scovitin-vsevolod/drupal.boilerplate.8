@@ -8,7 +8,6 @@ dependencies:
     - field.field.node.event.field_countries
     - field.field.node.event.field_dates
     - field.field.node.event.field_event_address
-    - field.field.node.event.field_event_status
     - field.field.node.event.field_geolocation
     - field.field.node.event.field_image
     - field.field.node.event.field_images
@@ -38,7 +37,6 @@ hidden:
   field_countries: true
   field_dates: true
   field_event_address: true
-  field_event_status: true
   field_geolocation: true
   field_image: true
   field_images: true

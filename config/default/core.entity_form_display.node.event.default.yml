@@ -7,7 +7,6 @@ dependencies:
     - field.field.node.event.field_countries
     - field.field.node.event.field_dates
     - field.field.node.event.field_event_address
-    - field.field.node.event.field_event_status
     - field.field.node.event.field_geolocation
     - field.field.node.event.field_image
     - field.field.node.event.field_images
@@ -62,12 +61,6 @@ content:
       default_country: null
     third_party_settings: {  }
     type: address_default
-    region: content
-  field_event_status:
-    weight: 9
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_geolocation:
     weight: 14
@@ -177,6 +170,9 @@ content:
       size: 60
       placeholder: ''
     third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 1

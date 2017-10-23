@@ -1,8 +1,8 @@
-boilerplate_news:
-  label: News
+boilerplate_item_8_4:
+  label: Full item 8-4
   category: Boilerplate
   type: partial
-  template: templates/layouts/boilerplate-news
+  template: templates/layouts/boilerplate-item-8-4
   regions:
     right:
       label: Right
