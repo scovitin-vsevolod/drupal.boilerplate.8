@@ -1,4 +1,6 @@
 <?php
+// @codingStandardsIgnoreFile
+
 
 /**
  * @file
@@ -790,6 +792,8 @@ $config['shield.settings']['user'] = 'visitor';
 $config['shield.settings']['print'] = '';
 $config['shield.settings']['allow_cli'] = TRUE;
 
+
+$settings['file_public_path'] = 'sites/default/demo-files';
 
 //$config_directories['sync'] = '../config/sync';
 

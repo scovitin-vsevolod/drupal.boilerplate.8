@@ -21,7 +21,12 @@ Log in to drupal ```drush @[project.machine_name].local uli```
 
 Set your staging server url in /admin/config/system/stage_file_proxy
 
-When your staging server is ready and you would like to sync the db, change in project.yml setup.strategy from import to sync 
+After you wish not to install from scratch and your your staging server is ready and you would like to sync the db
+
+* change in project.yml setup.strategy from import to sync
+* copy files form demo-files to files
+* change in settings.php file_public_path to sites/default/files
+ 
 
 ## Pre-requisites for local development
 * have your ssh key authorized on your project server in order to make db sync

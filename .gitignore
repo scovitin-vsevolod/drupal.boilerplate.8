@@ -21,6 +21,11 @@ docroot/sites/*/files
 /files-private
 docroot/sites/*/private
 
+# Ignore demo files
+!docroot/sites/*/demo-files
+docroot/sites/*/demo-files/*
+!docroot/sites/*/demo-files/images
+
 # Ignore contrib modules. These should be created during build process.
 docroot/modules/contrib
 docroot/themes/contrib
