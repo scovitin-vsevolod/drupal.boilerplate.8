@@ -24,7 +24,10 @@ class SetupCustomCommand extends BltTasks {
       'setup:hash-salt',
     ];
 
-    switch ($this->getConfigValue('setup.strategy')) {
+    $strategy = $this->getConfigValue('setup.strategy');
+    $this->say('Installing site using strategy ' . $strategy);
+
+    switch ($strategy) {
       case 'install':
         $commands[] = 'setup:drupal:install';
         break;
