@@ -6,7 +6,7 @@ Feature: Homepage
   Scenario: Check homepage sections
     Given I am on "/"
     Then I should see "Boilerplate slogan"
-    And I should see a ".slick-track" element
+    And I should see a ".block-region-slideshow" element
     And I should see "Latest updates"
     And I should see "Demo static block"
     And I should see "Quick links"
