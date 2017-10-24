@@ -22,7 +22,6 @@ Now you should be able to see the website at http://boierlplate.local
 * change in settings.php file_public_path to sites/default/files
 * Set your staging server url in /admin/config/system/stage_file_proxy
 
-
 ## Pre-requisites for local development
 * have your ssh key authorized on your project server in order to make db sync
 * install git
@@ -63,7 +62,17 @@ In order to preserve the config split integrity while working in a team, the fol
 5. git push
 
 ### Merging config management with production
-[To be discussed]
+Proposed solution
+* git checkout to prod-config branch (new branch)
+* download the config zip from prod and overwrite the config in local folder
+* git commit new changes to prod-config
+* git checkout develop
+* git merge prod-config into develop
+* solve possible git conflicts
+* commit new changes to develop
+* import new configs into local env to validate
+* [warn] only and right after production update, merge master (or develop) into prod config (This could be automated)
+
 
 ### Updating production
 The repo for artifacts is https://github.com/cristiroma/drupal.boilerplate.8
