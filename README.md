@@ -7,26 +7,21 @@ For local development it uses drupalVM http://docs.drupalvm.com/en/latest/
 This project is meant to be a quick startup for a new Drupal 8 project with some common configurations and modules.
 
 ## First time setup
-Download this repo and git init the folder. (optionally you can add this repo as a secondary origin)
+* Download this repo and git init the folder.
+* Change names in project.yml
+* Change names in box/config.yml
+* Change names in drush/site-aliases/aliases.drushrc.php.
+* Run scripts from [Getting started](#getting-started)
+* Log in to drupal ```drush @[project.machine_name].local uli```
 
-Change names in project.yml
+Now you should be able to see the website at http://boierlplate.local
 
-Change names in box/config.yml
-
-Change names in drush/site-aliases/aliases.drushrc.php.
-
-run scripts from Getting started
-
-Log in to drupal ```drush @[project.machine_name].local uli```
-
-Set your staging server url in /admin/config/system/stage_file_proxy
-
-After you wish not to install from scratch and your your staging server is ready and you would like to sync the db
-
+##### After your staging server is ready and you would like to sync the db
 * change in project.yml setup.strategy from import to sync
-* copy files form demo-files to files
+* copy files from demo-files to files
 * change in settings.php file_public_path to sites/default/files
- 
+* Set your staging server url in /admin/config/system/stage_file_proxy
+
 
 ## Pre-requisites for local development
 * have your ssh key authorized on your project server in order to make db sync
@@ -34,7 +29,7 @@ After you wish not to install from scratch and your your staging server is ready
 * install composer
 * install virtual box and vagrant (optional ansible) (as described in drupalVM http://docs.drupalvm.com/en/latest/)
 
-## Getting Started
+## Getting started
 
 ```bash
 git clone git@gitlab.com:bioland/website.git
@@ -46,7 +41,7 @@ source ~/.bash_profile
 blt vm
 blt custom:setup
 ```
-Now you should be able to see the website at http://bioland.local
+Now you should be able to see the website at http://boilerplate.local
 
 ## Ongoing development
 * Primary development branch: develop
