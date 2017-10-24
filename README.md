@@ -22,6 +22,7 @@ Now you should be able to see the website at [http://PROJECT_NAME.local]
 * change in settings.php file_public_path to sites/default/files
 * Set your staging server url in /admin/config/system/stage_file_proxy
 * Make changes in .travis.yml according to your project (more info in .travis.yml)
+* Remove or change behat example features for boilerplate project after you start customizing your project.
 
 ## Pre-requisites for local development
 * have your ssh key authorized on your project server in order to make db sync

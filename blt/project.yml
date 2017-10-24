@@ -26,10 +26,10 @@ git:
     email: ci@no-reply.org
 cm:
   strategy: config-split
-
-# TODO remove after set up staging
 setup:
+  # TODO change to sync after set up staging
   strategy: import
+  # TODO remove after changing to sync
   dump-file: ../boilerplate.sql
 drush:
   aliases:
