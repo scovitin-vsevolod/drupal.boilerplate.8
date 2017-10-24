@@ -32,8 +32,6 @@ Now you should be able to see the website at [http://PROJECT_NAME.local]
 ## Getting started
 
 ```bash
-git clone git@gitlab.com:bioland/website.git
-git checkout develop
 composer self-update
 composer install
 composer run-script blt-alias
