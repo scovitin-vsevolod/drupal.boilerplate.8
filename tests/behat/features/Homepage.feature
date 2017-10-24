@@ -5,7 +5,8 @@ Feature: Homepage
   @javascript
   Scenario: Check homepage sections
     Given I am on "/"
-    Then I should see a ".slick-track" element
+    Then the response status code should be 200
+    And I should see a ".slick-track" element
     And I should see "Latest updates"
     And I should see "Demo static block"
     And I should see "Quick links"
