@@ -22,18 +22,24 @@ cache:
   - vendor
 addons:
   chrome: stable
+# TODO set this according to your project
+#branches:
+#  only:
+#  - master
+#  - develop
 notifications:
   slack:
     rooms:
 # TODO Use a secure key for slack generated with travis client
 #      secure: verylonghasedstring
 before_install:
-- ssh-keyscan -p 2974 -t rsa,dsa,ecdsa,ED25519 -H www.chm-cbd.net 2>&1 | tee -a $HOME/.ssh/known_hosts
-- ssh-keyscan -t rsa,dsa,ecdsa,ED25519 -H gitlab.com 2>&1 | tee -a $HOME/.ssh/known_hosts
+# TODO set this according to your project
+#- ssh-keyscan -p <PORT> -t rsa,dsa,ecdsa,ED25519 -H <DOMAIN> 2>&1 | tee -a $HOME/.ssh/known_hosts
+#- ssh-keyscan -t rsa,dsa,ecdsa,ED25519 -H gitlab.com 2>&1 | tee -a $HOME/.ssh/known_hosts
 # TODO Encrypt file with travis client ie: travis encrypt-file travis_deploy_rsa --org --add
-- openssl aes-256-cbc -K $encrypted_<...>_key -iv $encrypted_<...>_iv
-  -in travis_deploy_rsa.enc -out ~/.ssh/id_rsa -d
-- chmod 400 ~/.ssh/id_rsa
+#- openssl aes-256-cbc -K $encrypted_<...>_key -iv $encrypted_<...>_iv
+#  -in travis_deploy_rsa.enc -out ~/.ssh/id_rsa -d
+#- chmod 400 ~/.ssh/id_rsa
 - phpenv config-rm xdebug.ini
 - composer self-update
 - composer validate --no-check-all --ansi
@@ -44,19 +50,20 @@ install:
 - source ${BLT_DIR}/scripts/travis/setup_project
 script:
 - source ${BLT_DIR}/scripts/travis/run_tests
-deploy:
-- provider: script
-  script: "${BLT_DIR}/scripts/travis/deploy_branch"
-  skip_cleanup: true
-  on:
-    branch: develop
-    php: 5.6
-- provider: script
-  script: "${BLT_DIR}/scripts/travis/deploy_branch"
-  skip_cleanup: true
-  on:
-    branch: master
-    php: 5.6
+# TODO uncomment this when you have set up the remote repo for artifacts.
+#deploy:
+#- provider: script
+#  script: "${BLT_DIR}/scripts/travis/deploy_branch"
+#  skip_cleanup: true
+#  on:
+#    branch: develop
+#    php: 5.6
+#- provider: script
+#  script: "${BLT_DIR}/scripts/travis/deploy_branch"
+#  skip_cleanup: true
+#  on:
+#    branch: master
+#    php: 5.6
 #- provider: script
 #  script: "${BLT_DIR}/scripts/travis/deploy_tag"
 #  skip_cleanup: true

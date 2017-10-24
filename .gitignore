@@ -12,7 +12,9 @@ project.local.yml
 # Ignore drupal core.
 docroot/core
 
+# Ignore any sql
 *.sql
+
 
 /salt.txt
 
@@ -21,10 +23,16 @@ docroot/sites/*/files
 /files-private
 docroot/sites/*/private
 
+
+# DEMO (should be removed afte you start your project)
 # Ignore demo files
 !docroot/sites/*/demo-files
 docroot/sites/*/demo-files/*
 !docroot/sites/*/demo-files/images
+
+# Allow demo sql
+!boilerplate.sql
+
 
 # Ignore contrib modules. These should be created during build process.
 docroot/modules/contrib
@@ -130,7 +138,6 @@ nbproject/*
 
 #Exports
 *.gz
-*.sql
 *.zip
 
 # PHPStorm

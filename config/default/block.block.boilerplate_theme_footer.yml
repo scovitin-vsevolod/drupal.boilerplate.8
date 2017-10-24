@@ -18,7 +18,7 @@ provider: null
 plugin: 'system_menu_block:footer'
 settings:
   id: 'system_menu_block:footer'
-  label: 'CBD links'
+  label: 'Information links'
   provider: system
   label_display: visible
   level: 1

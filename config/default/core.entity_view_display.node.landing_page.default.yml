@@ -6,7 +6,6 @@ dependencies:
     - field.field.node.landing_page.panelizer
     - node.type.landing_page
   module:
-    - ds
     - panelizer
     - user
 third_party_settings:
@@ -14,37 +13,63 @@ third_party_settings:
     enable: true
     custom: true
     allow: false
-    default: default
+    default: homepage
     displays:
-      default:
+      homepage:
         blocks:
-          cc8b3fe4-1a4a-4487-a3b6-ad95c667f7a3:
+          618c961a-a914-4ab0-807b-7f2c0a3682f8:
             id: 'views_block:slideshow-block_1'
             label: ''
             provider: views
-            label_display: visible
+            label_display: '0'
             views_label: ''
             items_per_page: none
             region: slideshow
             weight: 0
-            uuid: cc8b3fe4-1a4a-4487-a3b6-ad95c667f7a3
+            uuid: 618c961a-a914-4ab0-807b-7f2c0a3682f8
             context_mapping: {  }
-          f04582d4-07ab-4839-9bf3-1c39723d523d:
+          fc368f7b-25ab-498e-a9ec-f035b5b7bbfc:
+            id: 'block_content:92153c0f-56e0-44d6-a262-468199addbfd'
+            label: 'demo block'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: full
+            region: right
+            weight: 0
+            uuid: fc368f7b-25ab-498e-a9ec-f035b5b7bbfc
+            context_mapping: {  }
+          0f3a6252-2f39-4ddd-a4be-457752f193d3:
             id: 'views_block:slideshow-block_2'
             label: ''
             provider: views
             label_display: visible
             views_label: ''
             items_per_page: none
-            region: right
+            region: left
             weight: 0
-            uuid: f04582d4-07ab-4839-9bf3-1c39723d523d
+            uuid: 0f3a6252-2f39-4ddd-a4be-457752f193d3
             context_mapping: {  }
+        id: panels_variant
+        uuid: 278a2e28-0e74-4385-af96-e3f4ee26ce84
+        label: Homepage
+        weight: 0
+        layout: boilerplate_homepage
+        layout_settings: {  }
+        page_title: null
+        storage_type: panelizer_default
+        storage_id: 'node:landing_page:default:homepage'
+        pattern: panelizer
+        builder: ipe
+        static_context: {  }
+      default:
+        blocks: {  }
         id: panels_variant
         label: Default
         uuid: 4351e4bc-a69d-47d6-b07f-f9692d047a8d
         weight: 0
-        layout: boilerplate_homepage
+        layout: layout_onecol
         layout_settings: {  }
         page_title: '[node:title]'
         storage_type: panelizer_default
@@ -52,16 +77,6 @@ third_party_settings:
         builder: ipe
         pattern: panelizer
         static_context: {  }
-  ds:
-    layout:
-      id: boilerplate_homepage
-      library: null
-      disable_css: false
-      entity_classes: all_classes
-      settings: {  }
-    regions:
-      slideshow:
-        - links
 id: node.landing_page.default
 targetEntityType: node
 bundle: landing_page
@@ -69,7 +84,7 @@ mode: default
 content:
   links:
     weight: 100
-    region: slideshow
+    region: content
     settings: {  }
     third_party_settings: {  }
 hidden:

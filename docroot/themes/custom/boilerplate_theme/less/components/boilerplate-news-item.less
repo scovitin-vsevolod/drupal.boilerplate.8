@@ -1,0 +1,64 @@
+.boilerplate-news-item {
+  .boilerplate-news-item__right,
+  .boilerplate-news-item__left {
+    @media (min-width: @screen-sm-min) {
+      margin-top: -.5rem;
+    }
+  }
+  .field {
+    margin-top: .5rem;
+  }
+
+  .field--name-field-dates,
+  .field--name-field-url,
+  .field--name-field-event-address {
+    .gray-text();
+
+    &:before:extend(.glyphicon all) {
+      margin-right: .2em;
+      min-width: 1.2em;
+    }
+
+  }
+
+  // Icons
+  .field--name-field-dates:before { &:extend(.glyphicon-calendar:before all); }
+  .field--name-field-url:before { &:extend(.glyphicon-link:before all); }
+  .field--name-field-event-address:before { &:extend(.glyphicon-map-marker:before all); }
+
+  .field--name-field-url {
+    a { color: @brand-secondary; }
+  }
+
+  .field--name-node-post-date {
+    .gray-text();
+    font-size: .9em;
+  }
+
+  .field--name-field-event-address {
+    .address {
+      display: inline-flex;
+    }
+    span:not(:first-child) {
+      &:before {
+        content: ',';
+        margin-right: .2em;
+      }
+    }
+  }
+  .field--name-body {
+    margin-top: 3rem;
+  }
+  .field--name-field-images {
+    margin-top: (2rem - .5rem);
+
+    > .field--item {
+      margin-top: .5rem;
+    }
+    // see field--default--field-images--event.html.twig
+    // .col-sm-4 {
+    //   &:not(:first-child) { padding-left: .25rem; }
+    //   &:not(:last-child) { padding-right: .25rem; }
+    // }
+  }
+}
