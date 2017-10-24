@@ -23,10 +23,14 @@ class GitCommandHook extends BltTasks {
    *   status 0 means success
    */
   public function commitMsgHook($message) {
+    $pattern = $this->getConfigValue('git.validation.commit-msg.pattern',
+      '/\#\d+/');
+    $example = $this->getConfigValue('git.validation.commit-msg.example',
+      "Message pattern $pattern doesn't match");
     $this->say('Validating commit message syntax...');
-    if (!preg_match("/\#\d+/", $message)) {
+    if (!preg_match($pattern, $message)) {
       $this->logger->error("Invalid commit message!");
-      $this->say("Example: #135: Added the new field to the page content type.");
+      $this->say($example);
       return 1;
     }
 

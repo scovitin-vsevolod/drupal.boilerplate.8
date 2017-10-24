@@ -29,4 +29,19 @@ class AllCommandHook extends BltTasks {
     return $status_code;
   }
 
+  /**
+   * Override setup command.
+   *
+   * @see \Acquia\Blt\Robo\Commands\Setup\AllCommand::setup()
+   *
+   * @hook replace-command setup
+   */
+  public function setup() {
+    $status_code = $this->invokeCommands([
+      'custom:setup',
+    ]);
+
+    return $status_code;
+  }
+
 }

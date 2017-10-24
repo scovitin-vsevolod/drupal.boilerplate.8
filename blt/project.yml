@@ -1,4 +1,5 @@
 project:
+# TODO change names
   machine_name: boilerplate
   prefix: boilerplate
   human_name: Boilerplate 8
@@ -7,15 +8,26 @@ project:
   local:
     protocol: http
     hostname: '${project.machine_name}.local'
+
 git:
-  default_branch: develop
-  remotes:
-    - 'git@github.com:cristiroma/drupal.boilerplate.8.git'
+  validation:
+    commit-msg:
+      # TODO change this with your desired pattern.
+      pattern: '/\#\d+/'
+      example: 'Example: #135 Added new image field for news'
+# TODO uncomment and change this after you set up your artifacts repo.
+#  default_branch: develop
+#  remotes:
+#    - 'git@github.com:cristiroma/drupal.boilerplate.8.git'
+
+# TODO change names
   user:
     name: cristiroma
     email: ci@no-reply.org
 cm:
   strategy: config-split
+
+# TODO remove after set up staging
 setup:
   strategy: import
   dump-file: ../boilerplate.sql
@@ -48,6 +60,7 @@ modules:
     uninstall: { }
 
 target-hooks:
+# TODO change this if you user another theme
   frontend-setup:
     dir: ${docroot}/themes/custom/boilerplate_theme
     command: 'npm install && npm install grunt-cli'

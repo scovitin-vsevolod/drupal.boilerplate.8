@@ -14,13 +14,14 @@ This project is meant to be a quick startup for a new Drupal 8 project with some
 * Run scripts from [Getting started](#getting-started)
 * Log in to drupal ```drush @[project.machine_name].local uli```
 
-Now you should be able to see the website at http://boierlplate.local
+Now you should be able to see the website at [http://PROJECT_NAME.local]
 
 ##### After your staging server is ready and you would like to sync the db
 * change in project.yml setup.strategy from import to sync
 * copy files from demo-files to files
 * change in settings.php file_public_path to sites/default/files
 * Set your staging server url in /admin/config/system/stage_file_proxy
+* Make changes in .travis.yml according to your project (more info in .travis.yml)
 
 ## Pre-requisites for local development
 * have your ssh key authorized on your project server in order to make db sync
@@ -38,9 +39,9 @@ composer install
 composer run-script blt-alias
 source ~/.bash_profile
 blt vm
-blt custom:setup
+blt setup
 ```
-Now you should be able to see the website at http://boilerplate.local
+Now you should be able to see the website at [http://PROJECT_NAME.local]
 
 ## Ongoing development
 * Primary development branch: develop
