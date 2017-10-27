@@ -6,6 +6,13 @@ For local development it uses drupalVM http://docs.drupalvm.com/en/latest/
 
 This project is meant to be a quick startup for a new Drupal 8 project with some common configurations and modules.
 
+## Prerequisites on host
+
+* composer 1.5.2
+* php (5.x or 7.x) with: php-curl, php-xml, php-bz2, php-mbstring
+* Vagrant
+* VirtualBox 5.0 or 5.1 (currently does not work with 5.2)
+
 ## First time setup
 * Download this repo and git init the folder.
 * Change names in project.yml
