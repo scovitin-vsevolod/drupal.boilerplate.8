@@ -42,6 +42,9 @@ blt setup
 ```
 Now you should be able to see the website at [http://PROJECT_NAME.local]
 
+## Encountered issues on setup
+* if you cannot make ssh from within vagrant, but you can from your local machine, use ```ssh-add ~/.ssh/id_rsa``` (or whatever key name is)
+
 ## Ongoing development
 * Primary development branch: develop
 * Local drush alias: @boilerplate.local
