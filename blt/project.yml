@@ -1,0 +1,69 @@
+project:
+# TODO change names
+  machine_name: boilerplate
+  prefix: boilerplate
+  human_name: Boilerplate 8
+  profile:
+    name: standard
+  local:
+    protocol: http
+    hostname: '${project.machine_name}.local'
+
+git:
+  validation:
+    commit-msg:
+      # TODO change this with your desired pattern.
+      pattern: '/\#\d+/'
+      example: 'Example: #135 Added new image field for news'
+# TODO uncomment and change this after you set up your artifacts repo.
+  default_branch: develop
+  remotes:
+  - 'git@github.com:cristiroma/drupal.boilerplate.8.git'
+
+# TODO change names
+  user:
+    name: cristiroma
+    email: ci@no-reply.org
+cm:
+  strategy: config-split
+setup:
+  # TODO change to sync after set up staging
+  strategy: import
+  # TODO remove after changing to sync
+  dump-file: ../boilerplate.sql
+drush:
+  aliases:
+    remote: '${project.machine_name}.prod'
+    local: self
+    ci: self
+  default_alias: '${drush.aliases.local}'
+modules:
+  local:
+    # Extra stuff from development split.
+    enable: []
+    uninstall: []
+  ci:
+    # Extra stuff from development split.
+    enable: {  }
+    uninstall: [shield, seckit]
+  dev:
+    # Extra stuff from development split.
+    enable: [shield]
+    uninstall: { }
+  test:
+    # Extra stuff from development split.
+    enable: [shield]
+    uninstall: { }
+  prod:
+    # Extra stuff from prod split.
+    enable: { }
+    uninstall: { }
+
+target-hooks:
+# TODO change this if you user another theme
+  frontend-setup:
+    dir: ${docroot}/themes/custom/boilerplate_theme
+    command: 'npm install && npm install grunt-cli'
+  frontend-build:
+    dir: ${docroot}/themes/custom/boilerplate_theme
+    command: 'npm run build'
